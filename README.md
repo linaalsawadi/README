@@ -1,19 +1,17 @@
-                                                                        PROJE HAKKINDA
+                                                                        Lina Alsawadi
+                                                                        Sakarya university
+                                                                        About My Project
 
 
 
 
 
-                      Html , Css , Javascript kullanarak kendimi ve memleketimi tanıtan bir web sitesi oluşturmaya çalışıyorum.
-
-
+                     I will create a website using Html, Css, Javascript,Bootstrap,Php.
+                               
+                               A website consisting of 7 pages.
+                                   
                           Site :
-                          •	Ana Sayfa 
-                          •	Hakkımda 
-                          •	Şehrim
-                          •	Öz geçmiş
-                          •	Mirasımız
-                          •	İlgi Alanlarım
-                          •	Login ve İletişim 
+                          • Home Page • About Me • My City • Biography • Our Heritage • My Interests • Login and Contact 
+                          
 
-                          Sayfalarından oluşturulmaktadır.
+                          
