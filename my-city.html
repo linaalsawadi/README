@@ -9,254 +9,108 @@
     <link rel="stylesheet" type="text/css" href="css/proje1_Deneme.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css"  href="css/my-city.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+
+
+    <style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
     <script src="js/bootstrap.min.js" ></script>
     
-   <style>
-
-
-
-
-        .address{
-            font-size:large;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            text-align: center;
-            text-transform: capitalize;
-            font-size: 50px;
-            background-color: #000000;
-            color: aquamarine;
-        }
-        
-
-        .address  span{
-            color:chartreuse;
-        }
-
-        .divider1{
-            height: 50%;
-        }
-        
-        .figure{
-            width: 90%;
-            padding: 20px;
-            margin:100px auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
- 
-        .box{
-            width:250px;
-            margin: 0 10px;
-            box-shadow: rgb(0,0,0,.1);
-            transition: 1s;
-        }
-
-        .box img{
-            display: block;
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .box:hover{
-            transform: scale(1.3);
-            z-index: 3;
-        }
-
-        .figure figcaption{
-            text-align: center;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: chartreuse;
-        }
-
-        .container{
-            height:auto;
-            padding:0;
-            margin:0;
-            background-color: #fff;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-flow: wrap;
-            background-color: #000000;
-
-        }
-
-        .col-md-12{
-            width: 15%;
-            float:left;
-            margin-right: 110px;
-
-        }
-
-        .details{
-        margin:20px 0;
-        background-color:#fff;
-        padding:30px 20px;
-        position:relative;
-        z-index:1;
-        width: 100%;
-        background-color: #000000;
-         color: burlywood;
-
-        }
-
-        .details h2{
-         font-size: 22px;
-         text-transform: uppercase;
-         transition: 0.6s all;
-        }
-
-        .details p{
-            font-size: 14px;
-            transition: 0.6s all;
-        }                                                                 
-
-        .details a{
-          text-decoration: none;
-          text-transform:capitalize ;
-          color:#2c3e50;
-          background-color: #fff;
-          padding: 6px 12px;
-          display: inline-block;
-          font-size: 14px;
-          border: 1px solid #2c3e50;
-          transition: 0.6s all;
-        }
-
-        .details::before{
-            content: "";
-            width: 5px;
-            height: 100%;
-            background-color: #e6dfdf;
-            position:absolute;
-            left: 0;
-            top: 0;
-            z-index: -1;
-            transition:0.6s all;
-        }
-
-        .details:hover::before{
-            width: 155%;
-        }
-
-        .details:hover h2,
-        .details:hover p{
-            color: rgb(15, 20, 16);
-        }
-
-        .details:hover a{
-            background-color: transparent;
-            border: 1px solid rgb(255, 255, 255);
-        }
-
-        figure{
-            width: 100%;
-        }
-
-        .divider2{
-            height: 50%;
-            width: 100%;
-            background: #000000;
-        }
-
-        .divider2 .figure .box{
-            width: 200px;
-            height: 300px;
-            background: none;
-            margin: 2;
-        }
-        
-        *{
-            padding:0;
-            margin:0;
-        }
-
-        .divider3{
-            overflow-x: hidden;
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #000000;
-             
-        }
-
-        .section-container{
-            --bs-gutter-x: 1.5rem;
-            --bs-gutter-y: 0;
-            display: flex;
-            flex-wrap: wrap;
-            background-color: #000000;
-
-        }
-
-
-        .section-container .columns
-{
-flex:0 0 auto;
-width:50%;
-}
-.section-container .columns.image
-{
-background-position:center;
-background-repeat:no-repeat;
-background-size:cover;
-}
-.section-container .columns.content .content-container
-{
-padding:40px 50px;
-}
-.section-container .columns.content .content-container h5
-{
-font-weight:700;
-font-size:25px;
-margin-bottom:20px;
-color:aquamarine;
-}
-.section-container .columns.content .content-container p
-{
-font-weight:400;
-font-size:16px;
-color:aquamarine;
-margin-bottom:20px;
-margin-bottom:15px;
-text-align:justify;
-}
-@media screen and (max-width:767px)
-{
-.section-container
-{
-flex-flow:row wrap;
-}
-.section-container .columns.image{
-display:block;
-order:1;
-width:100%;
-height:250px;
-}
-.section-container .columns.content
-{
-display:block;
-order:2;
-width:100%;
-}
-.section-container .columns.content .content-container
-{
-padding:20px 35px;
-}
-.section-container .columns.content .content-container h5
-{
-    color:aquamarine;
-margin-bottom:5px;
-}
-}
-        
-
-    </style>
-</head><!--<div class="line"><img src="damascus/nature2.jpg"></div>
-    <div class="line"><img src="damascus/sham.jpg"></div>
-    <div class="line"><img src="damascus/minarimiz.jpg"></div>
-    <div class="line"><img src="damascus/mousqe.jpg"></div>
--->
+   
+</head>
 <body style="background-color:#000000">
 
 
@@ -275,57 +129,54 @@ margin-bottom:5px;
       </div>
 
 
-       <hr>
-      <div class="address">
-        my city <span>damascus</span>
+      
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="#slider1">
+            <img src="damascus/Ammawi.jpg" class="d-block w-100" alt="...">
+          </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#slider3">
+            <img src="damascus/minare.jpg" class="d-block w-100" alt="...">
+          </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#slider4">
+            <img src="damascus/lll.jpg" class="d-block w-100" alt="...">
+          </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#slider2">
+            <img src="damascus/hurriyet.jpg" class="d-block w-100" alt="...">
+          </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-       <hr>
-       <center><div class="divider1">
-  <div class="container">
-        
-        <div class="row-slider" >
-            <div class="col-md-12">
-                <div class="details">
-                    <figure>
-                    <a href="https://commons.wikimedia.org/wiki/Category:Streets_in_Syria"><img src="damascus/sham.jpg"></a>
-                    <h2>streets</h2>
-                    </figure> 
-                </div>
-           </div>
+    
 
 
-           <div class="col-md-12">
-            <div class="details">
-                <figure>
-                    <a href="https://en.wikipedia.org/wiki/Wildlife_of_Syria"><img src="damascus/nature2.jpg"></a>
-                <h2>The Nature</h2>
-                </figure> 
-            </div>
-       </div>
 
 
-       <div class="col-md-12">
-        <div class="details">
-            <figure>
-            <a href="https://www.alamy.com/stock-photo/umayyad-mosque-damascus-minaret.html"><img src="damascus/minarimiz.jpg"></a>
-            <h2>The Minare</h2>
-            </figure> 
-        </div>
-   </div>
 
 
-   <div class="col-md-12">
-    <div class="details">
-        <figure>
-        <a href="https://www.amazon.com/Damascus-Tiles-Ottoman-Architectural-Ceramics/dp/3791381474"><img src="damascus/kazaf.jpg"></a>
-        <h2> ceramics</h2>
-        </figure> 
-    </div>
-</div>
-        </div>
-  </div>
-</div>
-       </center>
+       
       
 
 
@@ -333,6 +184,7 @@ margin-bottom:5px;
  <div class="section-container">
     <div class="columns content">
        <div class="content-container">
+         
           <h5>Damascus ?</h5>
           <p>
             It is colloquially known in Syria as aš-Šām (الشَّام) and titled the "City of Jasmine" (مَدِينَةُ الْيَاسْمِينِ Madīnat al-Yāsmīn).Damascus is a major cultural center of the Levant and the Arab world. The city had an estimated population of 2,079,000 in 2019.
@@ -343,11 +195,14 @@ margin-bottom:5px;
                    </p>
        </div>
     </div>
-    <div class="columns image" style="background-image:url('damascus/mescid.jpg')">
+    <div class="columns image" style="background-image:url('damascus/mescid.jpg')" id="slider1">
        &nbsp;
     </div>
  </div>
- <div class="section-container">
+
+
+
+ <div class="section-container" id="slider2">
     <div class="columns image" style="background-image:url('damascus/hurriyet.jpg')">
        &nbsp;
     </div>
@@ -377,13 +232,49 @@ margin-bottom:5px;
  </div>
 
 
-     <div class="row">
+
+
+ <div class="section-container">
+  <div class="columns content">
+     <div class="content-container">
+       
+        <h5>Minarets ?</h5>
+        <p>
+          The Minaret of the Bride was the first one built and is located on the mosque's northern wall. The exact year of the minaret's original construction is unknown. The bottom part of the minaret most likely dates back to the Abbasid era in the 9th century. While it is possible that the Umayyads built it, there is no indication that a minaret on the northern wall was a part of al-Walid I's initial concept. Al-Muqaddasi visited the minaret in 985 when Damascus was under Abbasid control and described it as "recently built". The upper segment was constructed in 1174.[44] This minaret is used by the muezzin for the call to prayer (adhan) and there is a spiral staircase of 160 stone steps that lead to the muezzin's calling position.
+          Minaret of Isa, the mosque's tallest minaret
+          The Minaret of the Bride is divided into two sections; the main tower and the spire which are separated by a lead roof. The oldest part of the minaret, or the main tower, is square in shape, has four galleries,[107] and consists of two different forms of masonry; the base consists of large blocks, while the upper section is built of dressed stone. There are two light openings near the top of the main tower, before the roof, with horseshoe arches and cubical capitals enclosed in a single arch. A smaller arched corbel is located below these openings. According to local legend, the minaret is named after the daughter of the merchant who provided the lead for the minaret's roof who was married to Syria's ruler at the time. Attached to the Minaret of the Bride is the 18th-century replica of the 14th-century sundial built by Ibn al-Shatir.</p>
+     </div>
+  </div>
+  <div class="columns image" style="background-image:url('damascus/minare.jpg')" id="slider3">
+     &nbsp;
+  </div>
+</div>
+
+
+
+ <div class="section-container" id="slider4">
+    <div class="columns image" style="background-image:url('damascus/lll.jpg')">
+       &nbsp;
+    </div>
+    <div class="columns content">
+       <div class="content-container">
+          <h5>Citadel of Damascus</h5>
+          <p>
+            The Citadel of Damascus (Arabic: قلعة دمشق, romanized: Qalʿat Dimašq) is a large medieval fortified palace and citadel in Damascus, Syria. It is part of the Ancient City of Damascus, which was listed as a UNESCO World Heritage Site in 1979.
+
+The location of the current citadel was first fortified in 1076 by the Turkman warlord Atsiz bin Uvak, although it is possible but not proven that a citadel stood on this place in the Hellenistic and Roman periods. After the assassination of Atsiz bin Uvak, the project was finished by the Seljuq ruler Tutush I. The emirs of the subsequent Burid and Zengid dynasties carried out modifications and added new structures to it. During this period, the citadel and the city were besieged several times by Crusader and Muslim armies. In 1174, the citadel was captured by Saladin, the Ayyubid sultan of Egypt, who made it his residence and had the defences and residential buildings modified.
+          </p>
+       </div>
+    </div>
+ </div>
+
+     <!-- <div class="row">
       <div class="section">
           <div class="frame caption">
             <a href="https://en.wikipedia.org/wiki/Wildlife_of_Syria"> <img src="damascus/nature2.jpg" alt="" /></a>
               <div class="text">
-                  <h2>Mr. Lorem</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since.<a href="https://en.wikipedia.org/wiki/Wildlife_of_Syria">more</a></p>
+                  <h2>damascusian nature</h2>
+                  <p>damascus rich of wildlife<a href="https://en.wikipedia.org/wiki/Wildlife_of_Syria">more</a></p>
               </div>
           </div>
       </div>
@@ -417,24 +308,42 @@ margin-bottom:5px;
       </div>
   </div>
 
+-->
+ 
 
-  <div class="bg-dark text-light text-center">
-                <p class="align-middle p-5 mb-0">
-                  <span>Web Site &copy; | 2022 </span><br>
-                  <span>Designed by<b> Lina Al-sawadi</b></span><br>
-                  <span><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                  <span><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                    <a href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a>
-                    <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></span>
-                  </p>
-              </div>
+
+
+
+      <div class="bg-dark text-light text-center">
+        <p class="align-middle p-5 mb-0">
+          <span>Web Site &copy; | 2022 </span><br>
+          <span>Designed by<b> Lina Al-sawadi</b></span><br>
+          <span><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+          <span><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a>
+            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></span>
+          </p>
+      </div>
 
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script type="text/javascript">
+      <script type="text/javascript"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     <script>
 
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
       </script>
+
+<!-- JavaScript Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 </html>
