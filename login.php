@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
 {
       $user=$_POST['user'];
       $password=$_POST['password'];
-     if($user=="g201210570@gmail.com"  && $password=="123")  
+     if($user=="g201210570@sakarya.edu.tr"  && $password=="g201210570")  
      {
        
        echo ("Hi g201210570");
@@ -20,8 +20,8 @@ if(isset($_POST['submit']))
     
      else
      {
-      echo ("Lütfen tekrar deneyiniz");
-      echo '<a href="login.html"> back to log in page </a>';
+      echo ("A User With This Email Or Password Does Not Exist ");
+      header("Refresh:3; url=login.html")  ;    
      }
 
 
