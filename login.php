@@ -12,7 +12,7 @@ if(isset($_POST['submit']))
        
        echo ("Hi g201210570");
       echo"<br>"  ;
-       echo '<a href="proje1_Deneme.html"> back to Home page </a>';
+       echo '<a href="index.html"> back to Home page </a>';
      }
        
       
