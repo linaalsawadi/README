@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+h1 {
+	font-family: verdana;
+	text-align: center;
+	font-size: 40px;
+}
+.row {
+	width: 50%;
+	margin: 0 auto;
+}
+.section {
+	width: 50%;
+	float: left;
+}
+.caption {
+	width: 300px;
+	height: 280px;
+	text-align: center;
+	margin: 40px auto;
+	line-height: 25px;
+}
+.frame {
+	position: relative;
+	text-align: center;
+	perspective: 500px;
+	cursor: pointer;
+}
+.frame img {
+	width: 300px;
+	height: 300px;
+}
+.frame .text {
+	width: 70%;
+	height: 80%;
+	padding: 5% 8%;
+	position: absolute;
+	content: "";
+	top: 53%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(45deg);
+	transform-origin: center;
+	background: #fff;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+}
+.frame:hover .text {
+	transform: translate(-50%, -50%) rotateX(25deg);
+	opacity: 1;
+}
+.frame .text-1 {
+	transform: translate(-50%, -50%) rotateY(-30deg);
+}
+.frame:hover .text-1 {
+	transform: translate(-50%, -50%) rotateX(-20deg);
+	opacity: 1;
+}
+.frame .text h2 {
+	color: #35a935;
+	margin: 0;
+}
+.frame .text p {
+	border-top-style: double;
+	border-top-color: blue;
+	border-bottom-style: double;
+	border-bottom-color: green;
+	padding: 5px 0;
+}
+.frame .text p a {
+	color: green;
+	background: d8b716;
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	padding: 8px 12px;
+}
+.frame .text p a:hover {
+	color: #4545de;
+}
+.social i {
+	padding: 0 10px;
+	font-size: 20px;
+	color: #4545de;
+}
+.social i:hover {
+	color: green;
+}
+
+
+/* Media Query Start Here */
+
+@media only screen and (max-width: 1250px) {
+	.row {
+		width: 70%;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.row {
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	h1 {
+		font-size: 25px;
+	}
+	.section {
+		width: 100%;
+		float: none;
+	}
+}
+
+
+
+
+
+
