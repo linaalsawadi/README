@@ -228,22 +228,26 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform:uppercase;
     margin:40px 0px 20px 40px;
+    text-align: center;
 }
 
 .about-me .info > p{
     margin:40px 0px 20px 40px;
     line-height:1.4;
     color:rgb(147,150,147);
+    text-align: center;
 }
 
 .about-me .info p{
     margin:40px 0px 20px 40px;
+    text-align: center;
 }
 
 .about-me .info {
     float:right;
     text-align: left;
     width:60%;
+    text-align: center;
 }
 
 .about-me .info a{
